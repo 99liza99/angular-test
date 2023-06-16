@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="main">
+    <app-input (newItemEvent)=onInput($event)></app-input>
+  </div>
+  <div class="progress">
+    <h3>Results:</h3>
+    <div class="item" *ngFor="let status of statutes">
+      <app-progress-bar [status]="status" [className]="className" [smallText]="smallText"></app-progress-bar>
+    </div>
+  </div>
+</div>
